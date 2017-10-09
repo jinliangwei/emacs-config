@@ -33,7 +33,11 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (ac-config-default)
+
 (require 'julia-mode)
+(require 'protobuf-mode)
+
+(add-to-list 'auto-mode-alist '("\\.proto$" . protobuf-mode))
 (require 'google-c-style)
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
